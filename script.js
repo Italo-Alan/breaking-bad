@@ -3,6 +3,8 @@ home.addEventListener('click', () =>{
     window.scrollTo(0,0)
 });
 let response;
+let bad;
+let html = "";
 const characters = document.querySelector('.characters')
 const url = "https://www.breakingbadapi.com/api/characters"
 
@@ -16,20 +18,33 @@ const url = "https://www.breakingbadapi.com/api/characters"
 //     })
 // }
 
-const bad = response;
 fetch(url)
     .then(function (response){
         return response.json();
     })
     .then(function (response){
         console.log(response)
-        for(let c = 0; c <= response.length; c++){
-            console.log(response[c].name, response[c].birthday, response[c].status)
+        for(let i = 0; i <= response.length; i++){
+            var img = document.createElement("IMG");
+            img.src = response[i].img;
+            img.style.width = "200px";
+            document.querySelector('.imageCharacter').appendChild(img);
+            document.querySelector('.infoCharacter').textContent += response[i].name;
         }
 
+            /*
+                response[i].name
+                response[i].occupation
+                response[i].portrayed
+                response[i].status
+            */
+
+        //Funciona bem
+        // console.log(response)
+        // for(let c = 0; c <= response.length; c++){
+        //     console.log(response[c].name, response[c].birthday, response[c].status)
+        // }
     })
     .catch (function(err){
         console.error(`Failed retrieving information ${err}`);
     });
-
-    console.log(bad[0].name)

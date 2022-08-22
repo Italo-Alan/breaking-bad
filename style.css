@@ -146,6 +146,7 @@ ul a{
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px 8px hsla(0, 0%, 0%, 0.1);
 }
+
 /* Header title */
 .main-title{
     position: absolute;
@@ -170,7 +171,7 @@ ul a{
 main{
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
     margin: auto;
 }
 
@@ -355,3 +356,15 @@ main > p {
     text-indent: 20px;
 }
 
+.characters{
+    width: 100%;
+    background: black;
+    display: flex;
+}
+
+.cardCharacter{
+    background-color: white;
+    width: 350px;
+    height: 300px;
+}
+/* */
