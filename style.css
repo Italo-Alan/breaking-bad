@@ -238,13 +238,7 @@ main > p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.left-card-2 img{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 .left-card-3 img{
     width: 150%;
     position: absolute;
@@ -277,12 +271,12 @@ main > p {
 }
 
 .right-card h1{
-    font-weight: 400;
+    font-weight: 350;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin: 20px 0 0 0;
     padding: 0 0 0 40px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .right-card ul{
@@ -301,8 +295,8 @@ main > p {
 .right-card ul li{
     display: inline;
     color: #e3e3e3;
-    font-weight: 400;
-    font-size: 0.8em;
+    font-weight: 300;
+    font-size: 0.7em;
     padding: 0 5px 0 0 ;
 }
 
@@ -318,7 +312,7 @@ main > p {
 }
 
 .right-card .right-card-review > p::first-letter{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #ffda00;
 }
@@ -506,9 +500,20 @@ footer{
 } */
 
 @media (max-width:767px) {
-    html, body, header{
+    header{
+        /* width: 100vw;
+        max-width: 100%; */
+        position: relative;
+    }
+
+    .sociais{
+        left: 95%;
+    }
+
+    html{
         width: 100vw;
     }
+
     .logo{
         width: 7vh;
     }
@@ -520,6 +525,7 @@ footer{
         border-radius: 10px;
         padding-bottom: 100px;
     }
+
     nav{
         width: 100vw;
     }
@@ -528,16 +534,29 @@ footer{
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        gap: 15px;
+        gap: 25px;
     }
     
     .sec_about, .sec_quickLinks, .sec_contact{
         width: 90%;
     }
-
 }
 
-@media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:767px) and (max-width:1023px) {
+    header{
+        /* width: 100vw; */
+        /* max-width: 100%; */
+        position: relative;
+    }
+
+    .sociais{
+        left: 95%;
+    }
+
+    html{
+        width: 100vw;
+    }
+
     .card{
         width: 90vw;
         height: 200px;
