@@ -493,7 +493,7 @@ footer{
     color: rgb(160, 160, 160);
 }
 
-@media (max-width: 425px){
+/* @media (max-width: 425px){
     html{
         width: 100vw;
     }
@@ -503,22 +503,38 @@ footer{
     header{
         width: 100%;
     }
-}
+} */
 
 @media (max-width:767px) {
-    body{
+    html, body, header{
         width: 100vw;
     }
+    .logo{
+        width: 7vh;
+    }
+
     .card{
-        width: 90vw;
+        width: 86vw;
         height: 200px;
         background: transparent;
         border-radius: 10px;
         padding-bottom: 100px;
     }
-    .navbar{
-        width: 100%;
+    nav{
+        width: 100vw;
     }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sec_about, .sec_quickLinks, .sec_contact{
+        width: 90%;
+    }
+
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -529,4 +545,15 @@ footer{
         border-radius: 10px;
         padding-bottom: 100px;
     }
+
+    /* .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .sec_about, .sec_quickLinks, .sec_contact{
+        width: 90%;
+    } */
 }
