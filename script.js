@@ -21,25 +21,23 @@ fetch(url)
     .then(function (response){
         return response.json();
     })
-    .then(function (response){
-        console.log(response)
+    .then(function (bad){
         let html ="";
-        for(let i = 0; i <= response.length; i++){
+        for(let i = 0; i <= bad.length; i++){
             html = `
             <div class="p-card">
                 <div class="p-card_image">
-                <img src="${response[i].img}" class="p-card_content img2">
+                <img src="${bad[i].img}" class="p-card_content img2">
                 </div>
                 <div class="p-card_content">
-                    <span class="character-name" style="width: 100%">Nome: ${response[i].name}</span>
-                    <span class="character-portrayed" style="width: 100%">Ator/Atriz: ${response[i].portrayed}</span>
-                    <span class="character-status" style="width: 85%">Status: ${response[i].status}</span>
+                    <span class="character-name" style="width: 100%">Nome: ${bad[i].name}</span>
+                    <span class="character-portrayed" style="width: 100%">Ator/Atriz: ${bad[i].portrayed}</span>
+                    <span class="character-status" style="width: 85%">Status: ${bad[i].status}</span>
                 </div>
                 </div>
             `
             document.querySelector('.p-cards').innerHTML += html;
         }
-
     })
     .catch (function(error){
         console.error(`Failed retrieving information ${error}`);
