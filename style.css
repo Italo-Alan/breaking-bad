@@ -406,7 +406,7 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    /* gap: 80px; */
+    gap: 80px;
 }
 
 .container ul{
@@ -500,19 +500,19 @@ footer{
 } */
 
 @media (max-width:767px) {
-    header{
-        /* width: 100vw;
-        max-width: 100%; */
-        position: relative;
+    body{
+        /* width: 100%; */
+        /* max-width: 100%; */
+        overflow-x: hidden;
     }
 
     .sociais{
         left: 95%;
     }
 
-    html{
+    /* html{
         width: 100vw;
-    }
+    } */
 
     .logo{
         width: 7vh;
@@ -543,19 +543,17 @@ footer{
 }
 
 @media screen and (min-width:767px) and (max-width:1023px) {
-    header{
+    body{
         /* width: 100vw; */
         /* max-width: 100%; */
-        position: relative;
+        overflow-x: hidden;
     }
 
     .sociais{
         left: 95%;
     }
 
-    html{
-        width: 100vw;
-    }
+
 
     .card{
         width: 90vw;
