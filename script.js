@@ -12,10 +12,41 @@ function myFunction() {
   document.getElementById("progress-bar").style.width = scrolled + "%";
 }
 
+const text_title = document.querySelectorAll('.text_title');
+const content = document.querySelectorAll('.content_text');
+
+for(let i = 0; i < text_title.length; i++){
+    text_title[i].addEventListener('click', () => {
+        if(text_title[i].classList.contains('fechar')){
+            text_title[i].classList.toggle('fechar');
+            content[i].classList.toggle('ativar');
+        }else{
+            text_title[i].classList.add('fechar');
+            content[i].classList.add('ativar');
+        }
+    })
+}
+
+let nav = document.querySelector('nav');
+
+let mobileNav = document.querySelector('.mobile_nav')
+const hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener('click', () =>{
+    hamburger.classList.toggle("is-active"); 
+    if(hamburger.classList.contains('is-active')){
+        mobileNav.classList.add("active")
+        mobileNav.style.display = "flex"; 
+    }
+    else{
+        // mobileNav.style.display = "none";
+        mobileNav.classList.remove("active2")
+        mobileNav.classList.remove("active")
+    }
+})
 
 let response;
-const characters = document.querySelector('.characters')
-const url = "https://www.breakingbadapi.com/api/characters"
+const characters = document.querySelector('.characters');
+const url = "https://www.breakingbadapi.com/api/characters";
 
 fetch(url)
     .then(function (response){
@@ -35,7 +66,7 @@ fetch(url)
                     <span class="character-status" style="width: 85%">Status: ${bad[i].status}</span>
                 </div>
                 </div>
-            `
+            `;
             document.querySelector('.p-cards').innerHTML += html;
         }
     })
