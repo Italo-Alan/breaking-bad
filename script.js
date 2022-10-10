@@ -33,14 +33,11 @@ let mobileNav = document.querySelector('.mobile_nav')
 const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener('click', () =>{
     hamburger.classList.toggle("is-active"); 
+
     if(hamburger.classList.contains('is-active')){
-        mobileNav.classList.add("active")
-        mobileNav.style.display = "flex"; 
-    }
-    else{
-        // mobileNav.style.display = "none";
-        mobileNav.classList.remove("active2")
-        mobileNav.classList.remove("active")
+        mobileNav.classList.add("active");
+    }else{
+        mobileNav.classList.remove("active");
     }
 })
 
