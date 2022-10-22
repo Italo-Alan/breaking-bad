@@ -501,8 +501,6 @@ main > p {
 .p-card_image{
     align-items: center;
     background-color: #b5b9c1;
-    /* border-top-left-radius: .6rem;
-    border-top-right-radius: .6rem; */
     display: flex;
     flex: 5;
     justify-content: center;

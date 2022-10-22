@@ -1,8 +1,10 @@
+/*SCROLL HOME*/
 const home = document.querySelector('.home');
 home.addEventListener('click', () =>{
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
 });
 
+/*PROGRESS BAR*/
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
@@ -12,6 +14,7 @@ function myFunction() {
   document.getElementById("progress-bar").style.width = scrolled + "%";
 }
 
+/*SINOPSE*/
 const text_title = document.querySelectorAll('.text_title');
 const content = document.querySelectorAll('.content_text');
 
@@ -27,13 +30,20 @@ for(let i = 0; i < text_title.length; i++){
     })
 }
 
+/* NAVBAR*/
+let links = document.querySelectorAll('.mobile_a');
 let nav = document.querySelector('nav');
-
-let mobileNav = document.querySelector('.mobile_nav')
+let mobileNav = document.querySelector('.mobile_nav');
 const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener('click', () =>{
     hamburger.classList.toggle("is-active"); 
-
+    for(let i = 0; i < links.length; i++){
+        links[i].onclick = () =>{
+            mobileNav.classList.remove('active');
+            hamburger.classList.remove('is-active');
+        } 
+    }
+    
     if(hamburger.classList.contains('is-active')){
         mobileNav.classList.add("active");
     }else{
@@ -41,6 +51,7 @@ hamburger.addEventListener('click', () =>{
     }
 })
 
+/*CONSUMO API*/
 let response;
 const characters = document.querySelector('.characters');
 const url = "https://www.breakingbadapi.com/api/characters";
